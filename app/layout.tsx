@@ -1,14 +1,21 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Cairo } from 'next/font/google';
 import './globals.css';
 import { Providers } from './providers';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const cairo = Cairo({ 
+  subsets: ['arabic'],
+  variable: '--font-cairo',
+});
 
 export const metadata: Metadata = {
   title: 'Audio Repeater - Privacy First',
-  description: 'Repeat audio and video files locally in your browser. Your files never leave your device.',
-  manifest: '/audio-repeater/manifest.json',
+  description: 'Repeat audio and video files locally in your browser',
 };
 
 export const viewport: Viewport = {
@@ -27,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html suppressHydrationWarning>
+      <body className={`${inter.variable} ${cairo.variable} font-sans`}>
         <Providers>{children}</Providers>
       </body>
     </html>

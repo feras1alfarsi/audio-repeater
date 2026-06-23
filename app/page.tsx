@@ -80,7 +80,6 @@ export default function Home() {
     stop: stopRepetition,
   } = useRepetition();
 
-  // Define stopAll FIRST (before any callback that uses it)
   const stopAll = useCallback(() => {
     stop();
     stopRepetition();
@@ -210,8 +209,13 @@ export default function Home() {
 
   const isRTL = lang === 'ar';
 
+  useEffect(() => {
+    document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+    document.documentElement.lang = isRTL ? 'ar' : 'en';
+  }, [isRTL]);
+
   return (
-    <main className={`min-h-screen bg-background text-foreground ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
+    <main className="min-h-screen bg-background text-foreground">
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-6">
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold tracking-tight">{t(lang, 'title')}</h1>
