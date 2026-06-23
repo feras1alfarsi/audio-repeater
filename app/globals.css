@@ -93,14 +93,16 @@
   text-align: left;
 }
 
-/* For Arabic text specifically */
+/* Arabic font override */
+[dir="rtl"] body,
 [dir="rtl"] h1,
 [dir="rtl"] h2,
 [dir="rtl"] h3,
 [dir="rtl"] p,
 [dir="rtl"] span,
 [dir="rtl"] label,
-[dir="rtl"] button {
+[dir="rtl"] button,
+[dir="rtl"] input {
   font-family: var(--font-cairo), var(--font-inter), system-ui, sans-serif;
 }
 

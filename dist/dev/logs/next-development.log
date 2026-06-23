@@ -1,0 +1,5 @@
+{"timestamp":"00:00:09.260","source":"Server","level":"LOG","message":"> [PWA] PWA support is disabled"}
+{"timestamp":"00:00:09.262","source":"Server","level":"LOG","message":"> [PWA] PWA support is disabled"}
+{"timestamp":"00:00:10.303","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:13.364","source":"Server","level":"LOG","message":"○ Compiling / ..."}
+{"timestamp":"00:00:21.687","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}

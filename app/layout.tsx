@@ -11,6 +11,7 @@ const inter = Inter({
 const cairo = Cairo({ 
   subsets: ['arabic'],
   variable: '--font-cairo',
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -22,10 +23,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
-  themeColor: [
-    { media: '(prefers-color-scheme: dark)', color: '#0f0f0f' },
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-  ],
+  themeColor: '#0f0f0f',
 };
 
 export default function RootLayout({
@@ -35,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning>
-      <body className={`${inter.variable} ${cairo.variable} font-sans`}>
+      <body className={`${inter.variable} ${cairo.variable} font-sans antialiased`}>
         <Providers>{children}</Providers>
       </body>
     </html>
