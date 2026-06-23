@@ -8,6 +8,12 @@ const withPWA = require('next-pwa')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  distDir: 'dist',
+  images: {
+    unoptimized: true,
+  },
+  turbopack: {}, // <-- ADD THIS: Empty config to silence warning
 };
 
 module.exports = withPWA(nextConfig);

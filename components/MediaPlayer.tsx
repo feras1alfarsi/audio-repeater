@@ -1,10 +1,9 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
 import { Language, t } from '@/lib/i18n';
 
 interface MediaPlayerProps {
-  mediaRef: React.RefObject<HTMLAudioElement | HTMLVideoElement>;
+  mediaRef: React.RefObject<HTMLAudioElement | HTMLVideoElement | null>;
   mediaInfo: { url: string; type: 'audio' | 'video'; name: string } | null;
   onLoadedMetadata: () => void;
   onTimeUpdate: () => void;

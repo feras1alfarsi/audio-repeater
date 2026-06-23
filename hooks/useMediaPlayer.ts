@@ -10,6 +10,7 @@ interface MediaInfo {
 
 export function useMediaPlayer() {
   const mediaRef = useRef<HTMLAudioElement | HTMLVideoElement | null>(null);
+  
   const [mediaInfo, setMediaInfo] = useState<MediaInfo | null>(null);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);

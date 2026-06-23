@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "export": "next build --webpack",
+    "deploy": "gh-pages -d dist"
+
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

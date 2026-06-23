@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Audio Repeater - Privacy First',
   description: 'Repeat audio and video files locally in your browser. Your files never leave your device.',
+  manifest: '/audio-repeater/manifest.json',
 };
 
 export const viewport: Viewport = {
